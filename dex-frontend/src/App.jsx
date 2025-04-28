@@ -41,21 +41,22 @@ export default function App() {
       {/* ✅ 仅首页显示大字 + 浮动图标 */}
       {isHome && (
         <>
-          <div class="floating-token-container">
+          <div className="floating-token-container">
             <FloatingTokenList />
-          </div>
-          <div className="hero-section">
-            <h1>
-              随时随地
-              <br />
-              兑换。
-            </h1>
+            <div className="hero-section">
+              <h1>
+                随时随地
+                <br />
+                兑换。
+              </h1>
+            </div>
+            <SwapPage />
           </div>
         </>
       )}
 
       <Routes>
-        <Route path="/" element={<SwapPage />} />
+        {/* <Route path="/" element={<SwapPage />} /> */}
         <Route path="/swap" element={<SwapPage />} />
         <Route path="/explore" element={<ExplorePage />} />
         <Route path="/pool" element={<PoolPage />} />
