@@ -1,0 +1,204 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  position: relative;
+}
+
+.header.light {
+  background: #fff;
+  color: #000;
+}
+
+.header.dark {
+  background: #000;
+  color: #fff;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+
+  .nav a {
+    margin: 0 10px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .nav.light a {
+    color: #666;
+  }
+
+  .nav.light a:hover {
+    color: #000;
+  }
+  
+  .nav.dark a {
+    color: #999;
+  }
+
+  .nav.dark a:hover {
+    color: #fff;
+  }
+  
+}
+
+.logo {
+  width: 32px;
+  margin-right: 20px;
+}
+
+.nav a {
+  margin: 0 10px;
+  font-weight: bold;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.search-input {
+  height: 36px;
+  padding: 0 12px;
+  padding-top: 2px; /* 微调 */
+  padding-bottom: 2px; /* 微调 */
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-right: 10px;
+  font-size: 14px;
+  color: var(--text);
+  line-height: normal; /* 改成 normal */
+  box-sizing: border-box;
+}
+
+.search-input::placeholder {
+  color: var(--placeholder);
+  text-align: center;
+}
+
+.dark .search-input {
+  border: 1px solid #555;
+  background: #0d0d0d;
+  color: #fff;
+}
+
+.dark .search-input::placeholder {
+  color: #fff;
+}
+
+.wallet-button {
+  background: var(--primary);
+  color: #fff;
+  padding: 8px 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 16px;
+  margin-left: 10px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.light .wallet-button {
+  background: rgba(255, 0, 122, 0.1);
+  color: #ff007a;
+}
+
+.light .wallet-button:hover {
+  background: rgba(255, 0, 122, 0.2);
+  color: #cc0066;
+}
+
+.dark .wallet-button {
+  background: rgba(255, 0, 122, 0.15);
+  color: #ff66b2;
+}
+
+.dark .wallet-button:hover {
+  background: rgba(255, 0, 122, 0.3);
+  color: #ff80c1;
+}
+
+.theme-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  outline: none;
+  padding: 2px;
+}
+
+.more-menu {
+  font-size: 22px;
+  margin-left: 10px;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.light .more-menu {
+  background: rgba(0,0,0,0.05);
+}
+
+.dark .more-menu {
+  background: rgba(255,255,255,0.1);
+}
+
+.popup-menu {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 15px;
+  border-radius: 12px;
+  z-index: 10;
+}
+
+.dark .popup-menu {
+  color: #999;
+  background: #0d0d0d;
+  border: none;
+}
+
+.dark .popup-menu label,
+.dark .popup-menu .theme-title,
+.dark .popup-menu .currency-type
+{
+  color: #999;
+}
+
+.popup-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.popup-menu.light {
+  background: #fff;
+  color: #000;
+}
+
+.popup-menu.dark {
+  background: #000;
+  color: #fff;
+}
+
+.popup-item select {
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  outline: none;
+  color: inherit;
+}

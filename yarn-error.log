@@ -1,0 +1,56 @@
+Arguments: 
+  /Users/macbookpro/.volta/tools/image/node/18.20.5/bin/node /Users/macbookpro/.volta/tools/image/yarn/1.22.19/bin/yarn.js add --dev hardhat
+
+PATH: 
+  /Users/macbookpro/.volta/tools/image/yarn/1.22.19/bin:/Users/macbookpro/.volta/tools/image/node/18.20.5/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Users/macbookpro/.volta/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  18.20.5
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: https://registry.npmmirror.com/@nomicfoundation/edr-linux-arm64-musl/-/edr-linux-arm64-musl-0.8.0.tgz: ESOCKETTIMEDOUT
+      at ClientRequest.<anonymous> (/Users/macbookpro/.volta/tools/image/yarn/1.22.19/lib/cli.js:141517:19)
+      at Object.onceWrapper (node:events:631:28)
+      at ClientRequest.emit (node:events:517:28)
+      at TLSSocket.emitRequestTimeout (node:_http_client:847:9)
+      at Object.onceWrapper (node:events:631:28)
+      at TLSSocket.emit (node:events:529:35)
+      at Socket._onTimeout (node:net:598:8)
+      at listOnTimeout (node:internal/timers:569:17)
+      at process.processTimers (node:internal/timers:512:7)
+
+npm manifest: 
+  {
+    "name": "dex-project",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "devDependencies": {
+      "@nomiclabs/hardhat-ethers": "^2.2.3",
+      "chai": "^4.2.0",
+      "dotenv": "^16.4.7",
+      "ethers": "^5.7.2",
+      "hardhat": "^2.22.18"
+    },
+    "dependencies": {
+      "@openzeppelin/contracts": "^5.2.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

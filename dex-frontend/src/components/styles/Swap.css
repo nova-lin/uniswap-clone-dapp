@@ -1,0 +1,325 @@
+:root {
+  --color-light-bg: #ffffff;
+  --color-light-text: #0f0f0f;
+  --color-light-card: #f6f8fa;
+  --color-dark-bg: #0a0b0d;
+  --color-dark-text: #c9d1d9;
+  --color-dark-card: #0f1113;
+  --primary: #ff007a;
+}
+
+.swap-container {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial;
+  min-height: auto;
+  transition: background 0.3s, color 0.3s;
+  position: relative;
+  z-index: 1;
+}
+
+.swap-container.light {
+  background: var(--color-light-bg);
+  color: var(--color-light-text);
+}
+
+.swap-container.dark {
+  background: var(--color-dark-bg);
+  color: var(--color-dark-text);
+}
+
+.hero-title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  color: var(--text);
+  transition: color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+}
+
+/* Tabs 容器 */
+.swap-tabs-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  z-index: 5;
+  position: relative;
+}
+
+/* Tabs 容器包裹，控制整体宽度对齐卡片 */
+.swap-tabs-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 420px;
+  margin: 0 auto -20px auto; /* 居中对齐并上贴卡片 */
+  position: relative;
+  z-index: 10;
+  padding: 0 1rem; /* 给左右边一点间距 */
+  margin: 5rem auto 0.5rem auto;
+  transform: translateX(-24px);
+}
+
+/* 左侧 Tabs 容器 */
+.swap-tabs-left {
+  display: flex;
+  padding: 0.5rem;
+  gap: 1rem;
+}
+
+.swap-tab {
+  background: transparent;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: inherit;
+  opacity: 0.6;
+}
+
+.swap-tab:hover {
+  background: rgba(0, 0, 0, 0.04); /* light 模式下浅灰 */
+  opacity: 1;
+}
+
+.swap-container.dark .swap-tab:hover {
+  background: rgba(255, 255, 255, 0.08); /* dark 模式下浅白 */
+}
+
+/* 激活状态的 tab（加粗 + 高亮背景） */
+.swap-tab.active {
+  background: #f2f2f2;
+  color: #000;
+  font-weight: 600;
+  opacity: 1;
+}
+
+.swap-container.dark .swap-tab.active {
+  background: #1a1a1a;
+  color: #fff;
+}
+
+.swap-settings {
+  cursor: pointer;
+  padding: 0.4rem;
+  display: flex;
+  align-items: center;
+  color: inherit;
+}
+
+.swap-settings:hover {
+  opacity: 0.8;
+}
+
+
+.swap-card {
+  background: var(--color-light-card);
+  border-radius: 0 0 20px 20px;
+  padding: 1.5rem;
+  max-width: 420px;
+  margin: 0 auto;
+  margin-top: -8px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 8px 16px rgba(0, 0, 0, 0.04);
+  transition: background 0.3s;
+}
+
+.swap-container.dark .swap-card {
+  background: var(--color-dark-card);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.swap-input {
+  margin-bottom: 1.5rem;
+}
+
+.swap-input label {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.input-row {
+  display: flex;
+  margin-top: 0.5rem;
+  align-items: center;
+  background: var(--input-bg);
+  border-radius: 12px;
+  padding: 0.5rem;
+  transition: background 0.3s;
+}
+
+.light .input-row {
+  --input-bg: #f0f0f0;
+}
+
+.dark .input-row {
+  --input-bg: #1a1a1a;
+}
+
+.input-row input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+  color: inherit;
+}
+
+.input-row button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 9999px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.light .input-row button {
+  background: #ff00aa;
+  color: #ffffff;
+  box-shadow: 0 0 6px rgba(255, 0, 122, 0.2);
+}
+
+.light .input-row button:hover {
+  background: #e6008c;
+}
+
+.dark .input-row button {
+  background: rgba(255, 0, 122, 0.15);
+  color: #ff66b2;
+}
+
+.dark .input-row button:hover {
+  background: rgba(255, 0, 122, 0.25);
+  color: #ff80c1;
+}
+
+.token-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--input-bg);
+  border-radius: 12px;
+  padding: 0.5rem;
+  transition: background 0.3s;
+}
+
+.input-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-right: 0.5rem;
+}
+
+.input-box input {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  color: inherit;
+}
+
+.usd {
+  font-size: 0.75rem;
+  opacity: 0.6;
+  margin-top: 4px;
+}
+
+.token-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0.4rem 0.9rem;
+  border-radius: 9999px;
+  font-weight: bold;
+  cursor: pointer;
+  background: #ffffff;
+  color: #0f0f0f;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+}
+
+.token-button:hover {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.light .token-button:hover {
+  background: rgba(255, 0, 122, 0.05);
+}
+
+.dark .token-button:hover {
+  background: rgba(255, 0, 122, 0.15);
+}
+
+.input-box input:hover::placeholder {
+  color: var(--primary);
+}
+
+.token-button img {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.switch-btn {
+  text-align: center;
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  cursor: pointer;
+  background: var(--input-bg);
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  line-height: 36px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.connect-btn {
+  width: 100%;
+  padding: 0.9rem;
+  background: rgba(255, 0, 122, 0.1);
+  color: #ff007a;
+  border: none;
+  border-radius: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+
+.connect-btn:hover {
+  background: rgba(255, 0, 122, 0.2);
+  color: #cc0066;
+}
+
+.dark .connect-btn {
+  background: rgba(255, 0, 122, 0.15);
+  color: #ff66b2;
+}
+
+.dark .connect-btn:hover {
+  background: rgba(255, 0, 122, 0.3);
+  color: #ff80c1;
+}
+
+.bottom-info {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}

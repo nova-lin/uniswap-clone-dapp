@@ -1,0 +1,115 @@
+:root {
+  --primary: #ff007a;
+  --bg: #ffffff;
+  --text: #000000;
+  --border: #ccc;
+}
+
+[data-theme="dark"] {
+  --bg: #0a0b0d;
+  --text: #ffffff;
+  --border: #333;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  min-height: 100vh;
+  position: relative;
+  background: var(--bg); /* 👈 确保背景统一 */
+  transition: background 0.3s ease;
+}
+
+
+.section-wrapper {
+  background: var(--bg);  /* 自动变暗/变亮 */
+  transition: background 0.3s ease;
+}
+
+.intro-text {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 16px;
+  color: var(--text-secondary, #666);
+  line-height: 1.6;
+  padding: 0 1rem;
+}
+
+
+.hero-section {
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center;     /* 垂直居中 */
+  height: 270px;           /* 或你需要的高度 */
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1.3;
+  flex-direction: column; /* 保证文字分行 */
+  margin-bottom: -80px;
+}
+
+
+.dark .intro-text {
+  color: #e1dddd;
+}
+
+.scroll-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  background: var(--bg); /* 统一明暗模式背景 */
+  transition: background 0.3s ease;
+}
+
+.scroll-tip {
+  display: inline-block; /* 关键：只占内容宽度 */
+  margin: 2rem auto 1rem; /* 上下间距 + 自动水平居中 */
+  text-align: center;
+  font-size: 0.9rem;
+  color: #888;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  animation: bounce 2s infinite;
+}
+
+.scroll-tip:hover {
+  opacity: 0.7;
+}
+
+.dark .scroll-tip {
+  color: #aaa;
+}
+
+.floating-token-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px; /* 根据你页面的最大宽度来设，比如 1200px */
+  margin: 0 auto;
+  height: 600px; /* 漂浮的区域高度，可以自己调 */
+  pointer-events: none; /* 不影响鼠标点其他元素 */
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+
+
+
+

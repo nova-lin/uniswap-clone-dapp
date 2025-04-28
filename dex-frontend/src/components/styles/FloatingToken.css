@@ -1,0 +1,179 @@
+/* 
+.floating-token {
+  position: absolute;
+  z-index: 1;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+  filter: blur(3px);
+  opacity: 0.6;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  animation: float var(--duration, 4s) ease-in-out infinite;
+  animation-delay: var(--delay, 0s);
+}
+
+.token-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: contain;
+  filter: blur(4px) brightness(0.7);
+  transition: all 0.3s ease;
+}
+
+.token-info-box {
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  transform: translate(-100%, -50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-size: 12px;
+  white-space: nowrap;
+  padding: 6px 10px;
+  border-radius: 8px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 9;
+}
+
+  
+
+.floating-token:hover {
+  filter: none;
+  opacity: 1;
+}
+
+.floating-token:hover .token-img {
+  filter: none;
+  transform: scale(1.1);
+}
+
+.floating-token:hover .token-info-box {
+  opacity: 1;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(calc(-1 * var(--amplitude, 10px)));
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.floating-info-panel {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.08);
+  padding: 12px 16px;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 14px;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.08);
+  z-index: 99;
+}
+
+[data-theme="dark"] .floating-info-panel {
+  color: #fff;
+}
+
+[data-theme="light"] .floating-info-panel {
+  color: #111;
+}
+
+[data-theme="dark"] .floating-token {
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+}
+ */
+
+ .floating-token-list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0; /* 确保在 Swap 面板后面，但比背景高 */
+}
+
+
+
+.floating-token {
+  position: absolute;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+  filter: blur(3px);
+  opacity: 0.6;
+  transition: all 0.3s ease;
+  animation: float var(--duration, 4s) ease-in-out infinite;
+  animation-delay: var(--delay, 0s);
+  pointer-events: auto;
+  z-index: 1;
+}
+
+.token-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: contain;
+  filter: blur(4px) brightness(0.7);
+  transition: all 0.3s ease;
+}
+
+.floating-token:hover {
+  filter: none;
+  opacity: 1;
+}
+
+.floating-token:hover .token-img {
+  filter: none;
+  transform: scale(1.1);
+}
+
+.token-info-box {
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  transform: translate(-100%, -50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-size: 12px;
+  white-space: nowrap;
+  padding: 6px 10px;
+  border-radius: 8px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.floating-token:hover .token-info-box {
+  opacity: 1;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(calc(-1 * var(--amplitude, 10px)));
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+

@@ -1,0 +1,250 @@
+/* === DexInfo 样式，仿 Uniswap 四卡片风格 === */
+.dexinfo-container {
+  padding: 3rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dexinfo-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.dexinfo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 1.5rem;
+}
+
+.dexinfo-card {
+  border-radius: 24px;
+  padding: 24px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* 四个不同卡片背景色 */
+.dexinfo-card.blue {
+  background: #e9f6ff;
+}
+
+.dexinfo-card.pink {
+  background: #fef1f9;
+}
+
+.dexinfo-card.green {
+  background: #e7faf3;
+}
+
+.dexinfo-card.purple {
+  background: #f5efff;
+}
+
+/* 暗色背景适配 */
+.dark .dexinfo-card.blue {
+  background: #0a1a2b;
+}
+.dark .dexinfo-card.pink {
+  background: #2b0b1d;
+}
+.dark .dexinfo-card.green {
+  background: #052f26;
+}
+.dark .dexinfo-card.purple {
+  background: #1d0e36;
+}
+
+/* badge 通用样式 */
+.badge {
+  display: inline-block;
+  background: #ffffff;
+  border-radius: 999px;
+  padding: 6px 16px;
+  overflow: hidden;
+  width: fit-content;
+  max-width: 220px;
+  transition: all 0.3s ease;
+}
+
+.badge-content {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.badge-icon {
+  width: 16px;
+  height: 16px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.arrow-icon {
+  width: 14px;
+  height: 14px;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: all 0.3s ease;
+}
+
+.badge:hover {
+  padding: 6px 12px;
+  min-width: 110px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.badge:hover .badge-icon {
+  opacity: 0;
+  transform: translateX(-6px);
+}
+
+.badge:hover .arrow-icon {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* 每卡片自定义颜色 */
+.badge.blue span {
+  color: #1990ff;
+}
+.badge.pink span {
+  color: #ff007a;
+}
+.badge.green span {
+  color: #00b894;
+}
+.badge.purple span {
+  color: #9b51e0;
+}
+
+/* 黑暗模式 badge 文字颜色 */
+.dark .badge.blue span {
+  color: #4db8ff;
+}
+.dark .badge.pink span {
+  color: #ff66a3;
+}
+.dark .badge.green span {
+  color: #4be3c6;
+}
+.dark .badge.purple span {
+  color: #d6afff;
+}
+
+/* 标题文字颜色 */
+.card-title.blue {
+  color: #1990ff;
+}
+.card-title.pink {
+  color: #ff007a;
+}
+.card-title.green {
+  color: #00b894;
+}
+.card-title.purple {
+  color: #9b51e0;
+}
+
+/* 黑暗模式适配 */
+.dark .card-title.blue {
+  color: #4db8ff;
+}
+.dark .card-title.pink {
+  color: #ff66a3;
+}
+.dark .card-title.green {
+  color: #4be3c6;
+}
+.dark .card-title.purple {
+  color: #d6afff;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 1.2rem 0;
+  line-height: 1.6;
+}
+
+.token-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.token-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.token-item:hover {
+  background: #f6f6f7;
+  transform: scale(1.015);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.dark .token-item {
+  background: #1c1c1f;
+}
+.dark .token-item:hover {
+  background: #2a2a2d;
+}
+
+.token-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.token-left img {
+  width: 28px;
+  height: 28px;
+}
+
+.token-symbol {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.token-name {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.token-price {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.dark .token-symbol,
+.dark .token-price {
+  color: #fff;
+}
+
+.dark .token-name {
+  color: #aaa;
+}
+
+.card-content {
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.card-content .highlight {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.dark .card-content {
+  color: #eaeaea;
+}
