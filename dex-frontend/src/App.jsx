@@ -55,12 +55,13 @@ export default function App() {
         </>
       )}
 
-      <Routes>
-        {/* <Route path="/" element={<SwapPage />} /> */}
-        <Route path="/swap" element={<SwapPage />} />
-        <Route path="/explore" element={<ExplorePage />} />
-        <Route path="/pool" element={<PoolPage />} />
-      </Routes>
+      {!isHome && (
+        <Routes>
+          <Route path="/swap" element={<SwapPage />} />
+          <Route path="/explore" element={<ExplorePage />} />
+          <Route path="/pool" element={<PoolPage />} />
+        </Routes>
+      )}
 
       <div className="section-wrapper">
         <div className="intro-text">
