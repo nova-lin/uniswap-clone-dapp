@@ -95,7 +95,6 @@ html, body, #root {
   width: 100%;
   max-width: 1200px; /* 根据你页面的最大宽度来设，比如 1200px */
   margin: 0 auto;
-  height: 600px; /* 漂浮的区域高度，可以自己调 */
   pointer-events: none; /* 不影响鼠标点其他元素 */
 }
 

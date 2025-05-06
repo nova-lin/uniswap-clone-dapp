@@ -1,4 +1,3 @@
-// App.jsx
 import { useEffect, useState } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { getReserves } from "./utils/contract";
@@ -50,18 +49,15 @@ export default function App() {
                 兑换。
               </h1>
             </div>
-            <SwapPage />
           </div>
         </>
       )}
-
-      {!isHome && (
-        <Routes>
-          <Route path="/swap" element={<SwapPage />} />
-          <Route path="/explore" element={<ExplorePage />} />
-          <Route path="/pool" element={<PoolPage />} />
-        </Routes>
-      )}
+      <Routes>
+        <Route path="/" element={<SwapPage />} />
+        <Route path="/swap" element={<SwapPage />} />
+        <Route path="/explore" element={<ExplorePage />} />
+        <Route path="/pool" element={<PoolPage />} />
+      </Routes>
 
       <div className="section-wrapper">
         <div className="intro-text">
